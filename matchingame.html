@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Mario Matching Game</title>
+</head>
+<body>
+    <div class="outside-margin">
+
+
+    <div class="box">
+        <label >
+            <input type="checkbox" class="check" id="chk1">
+            <i></i>
+        </label>
+        <label >
+            <input type="checkbox" class="check" id="chk2">
+            <i></i>
+        </label>
+        <label >
+            <input type="checkbox" class="check" id="chk3">
+            <i></i>
+        </label>
+    </div>
+</div>
+<div class="bottom-container">
+    <div class="button">
+        <button class="reset">Start again</button>
+    </div>
+
+
+</div>
+<script>
+    let chk1=document.querySelector('#chk1');
+    let chk2=document.querySelector('#chk2');
+    let chk3=document.querySelector('#chk3');
+    let reset=document.querySelector('.reset')
+    chk1.onclick=function(){
+        if(chk1.checked== true){
+            chk1.disabled='true';
+        }
+    }
+    chk2.onclick=function(){
+        if(chk2.checked== true){
+            chk2.disabled='true';
+        }
+    }
+    chk3.onclick=function(){
+        if(chk3.checked== true){
+            chk3.disabled='true';
+        }
+    }
+    reset.onclick=function(){
+        chk1.disabled=false;
+        chk1.checked=false;
+        chk2.disabled=false;
+        chk2.checked=false;
+        chk3.disabled=false;
+        chk3.checked=false;
+    }
+</script>
+</body>
+</html>
